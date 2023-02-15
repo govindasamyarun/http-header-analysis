@@ -1,0 +1,29 @@
+{
+    "name": "HTTP Header Analysis",
+    "version": "1.0",
+    "description": "HTTP Header Analysis",
+    "permissions": ["activeTab", "browsingData", "pageCapture", "sessions", "storage", "webNavigation", "webRequest"],
+    "host_permissions": ["*://*/*"],
+	"manifest_version": 3,
+    "background": {
+        "service_worker": "js/background.js"
+    }, 
+	"action": {
+		"default_icon": "images/investigation_32.png"
+	},   	
+	"icons": { "128": "images/investigation_128.png"},
+    "content_scripts": [{
+        "js": ["js/contentScript.js"],	
+        "css": ["css/main.css", "css/util.css", "css/bootstrap.min.css", "css/bootstrap.min.css.map"],
+        "matches": ["*://*/*"]
+    }],
+	"web_accessible_resources": [{ 
+        "resources": ["*.css", "*.png", "*.ttf", "*.js"],
+        "matches": ["*://*/*"]
+      }],
+      "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; worker-src 'self'"
+      }
+    
+    
+}
