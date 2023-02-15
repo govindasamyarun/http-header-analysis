@@ -1,6 +1,6 @@
 ## HTTP Header Analysis
 
-HTTP Header Analysis chrome extension enables you to inspect response headers after the page loads. 
+HTTP Header Analysis chrome extension enables you to inspect response headers after the page loads. The following headers are analyzed, and the results are displayed when you select the extension icon. 
 
 * X-Frame-Options
 * Strict-Transport-Security
